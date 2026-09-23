@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional portfolio of Md. Zakaria Hossen Siam, Special Educator.">
+<title>Md. Zakaria Hossen Siam | Special Educator</title>
+<style>
+:root{
+  --navy:#102a43;
+  --blue:#1769aa;
+  --sky:#eaf5ff;
+  --teal:#0f766e;
+  --ink:#17212b;
+  --muted:#5f6b76;
+  --line:#dce5ec;
+  --white:#fff;
+  --bg:#f7fafc;
+  --shadow:0 14px 35px rgba(16,42,67,.10);
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.65;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin:auto}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;color:var(--navy);letter-spacing:.2px}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;gap:25px;font-size:.94rem;color:#34495e}
+.nav-links a:hover{color:var(--blue)}
+.hero{
+  min-height:650px;display:flex;align-items:center;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(23,105,170,.13),transparent 30%),
+    linear-gradient(135deg,#f7fbff 0%,#eef7ff 50%,#fff 100%);
+}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.eyebrow{
+  display:inline-block;background:#dff0ff;color:var(--blue);
+  padding:7px 13px;border-radius:999px;font-size:.82rem;font-weight:700;
+  margin-bottom:18px;
+}
+h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.05;color:var(--navy);letter-spacing:-2px}
+.hero h1 span{color:inherit}
+.hero-sub{font-size:1.2rem;color:var(--teal);font-weight:700;margin:17px 0 12px}
+.hero-text{font-size:1.02rem;color:var(--muted);max-width:670px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 20px;border-radius:10px;font-weight:700;border:1px solid transparent;display:inline-block}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 8px 20px rgba(23,105,170,.2)}
+.btn-secondary{background:white;border-color:var(--line);color:var(--navy)}
+.hero-card{
+  background:white;border:1px solid var(--line);border-radius:28px;
+  padding:32px;box-shadow:var(--shadow)
+}
+.profile-photo{
+  width:145px;height:145px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid #eaf5ff;box-shadow:0 8px 22px rgba(16,42,67,.16);margin-bottom:22px;
+}
+.hero-card h3{font-size:1.2rem;color:var(--navy);margin-bottom:14px}
+.contact-row{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid #edf1f4;color:var(--muted);font-size:.92rem}
+.contact-row:last-child{border-bottom:0}
+section{padding:88px 0}
+.section-head{margin-bottom:38px}
+.section-kicker{color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
+.section-head h2{font-size:2.2rem;color:var(--navy);margin-top:5px}
+.section-head p{color:var(--muted);max-width:760px;margin-top:8px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:white;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:0 8px 25px rgba(16,42,67,.05)}
+.card h3{color:var(--navy);margin-bottom:12px}
+.timeline{position:relative;padding-left:30px}
+.timeline:before{content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:#cfe1ee}
+.timeline-item{position:relative;padding:0 0 36px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-item:before{content:"";position:absolute;left:-29px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--blue);border:3px solid #d9efff}
+.date{color:var(--blue);font-weight:800;font-size:.88rem}
+.role{font-size:1.25rem;font-weight:800;color:var(--navy);margin-top:3px}
+.org{font-weight:700;color:#455a64;margin-bottom:10px}
+.timeline ul{padding-left:20px;color:var(--muted)}
+.timeline li{margin:5px 0}
+.skills{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.skill{
+  background:white;border:1px solid var(--line);border-radius:14px;padding:20px 14px;
+  text-align:center;font-weight:700;color:var(--navy);min-height:95px;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 7px 20px rgba(16,42,67,.04)
+}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.photo-card{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.photo-card img{width:100%;height:260px;object-fit:cover;display:block}
+.photo-body{padding:20px}
+.photo-body h3{color:var(--navy);font-size:1.08rem;margin-bottom:5px}
+.photo-body p{color:var(--muted);font-size:.92rem}
+.note{margin-top:18px;color:var(--muted);font-size:.88rem}
+.edu{
+  display:grid;grid-template-columns:100px 1fr;gap:22px;align-items:start
+}
+.edu-icon{
+  width:100px;height:100px;border-radius:20px;background:var(--sky);
+  display:grid;place-items:center;font-size:2rem;color:var(--blue)
+}
+.edu h3{font-size:1.3rem;color:var(--navy)}
+.edu .year{color:var(--blue);font-weight:800}
+.cta{background:linear-gradient(135deg,var(--navy),#174e7a);color:white;border-radius:28px;padding:55px}
+.cta h2{font-size:2.2rem;margin-bottom:10px}
+.cta p{color:#d7e7f4;max-width:700px}
+.cta .btn-secondary{margin-top:20px}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:850px){
+  .nav-links{display:none}
+  .hero{padding:75px 0}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .skills{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:1fr}
+  .photo-card img{height:300px}
+}
+@media(max-width:520px){
+  section{padding:65px 0}
+  .skills{grid-template-columns:1fr 1fr}
+  .cta{padding:35px 25px}
+  h1{letter-spacing:-1px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Zakaria <span>Siam</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#gallery">Work Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">SPECIAL EDUCATOR</span>
+      <h1>Md. Zakaria<br><span>Hossen Siam</span></h1>
+      <p class="hero-sub">Inclusive Education • Individualized Learning • Student Engagement</p>
+      <p class="hero-text">
+        Dedicated Special Educator with hands-on experience supporting students with
+        visual and intellectual disabilities in Bangladesh. Skilled in developing
+        Individualized Education Plans (IEPs), adapting lesson content to diverse
+        learning needs, and building an inclusive, encouraging classroom environment.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#experience">View Experience</a>
+        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <img class="profile-photo" src="assets/profile.png" alt="Md. Zakaria Hossen Siam">
+      <h3>Professional Profile</h3>
+      <div class="contact-row">📍 Patuakhali, Barisal, Bangladesh</div>
+      <div class="contact-row">✉ siam***@gmail.com</div>
+      <div class="contact-row">☎ 017********</div>
+      <div class="contact-row">🎓 B.Ed. — Special Education</div>
+    </aside>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">About Me</div>
+      <h2>Supporting every learner with dignity</h2>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>My Professional Focus</h3>
+        <p>
+          I am a dedicated Special Educator with experience supporting students with
+          visual impairment and intellectual disabilities. My work focuses on adapting
+          lesson plans and instructional materials to individual learning needs,
+          developing IEPs, and creating a supportive classroom environment that
+          encourages engagement and independence.
+        </p>
+      </div>
+      <div class="card">
+        <h3>My Approach</h3>
+        <p>
+          I value individualized support, inclusive classroom practice, meaningful
+          student participation, and the development of learners' confidence and
+          independence. I aim to help each learner grow according to their needs
+          and potential.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Work Experience</div>
+      <h2>Professional Experience</h2>
+    </div>
+
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="date">November 2024 – April 2025</div>
+          <div class="role">Special Educator</div>
+          <div class="org">Baptist Mission Integrated School, Mirpur, Dhaka</div>
+          <ul>
+            <li>Taught students with visual impairment and intellectual disabilities.</li>
+            <li>Adapted lesson plans and instructional materials to individual learning needs.</li>
+            <li>Developed and implemented Individualized Education Plans (IEPs).</li>
+            <li>Supported students' academic and developmental progress.</li>
+            <li>Fostered an inclusive and supportive classroom environment.</li>
+            <li>Encouraged student engagement and independence.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Work Gallery</div>
+      <h2>Experience in Practice</h2>
+    </div>
+
+    <div class="gallery">
+      <article class="photo-card">
+        <img src="assets/school-exterior.jpg" alt="Baptist Mission Integrated School exterior">
+        <div class="photo-body">
+          <h3>School Environment</h3>
+          <p>Baptist Mission Integrated School, Mirpur, Dhaka.</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="assets/classroom-experience.jpg" alt="Classroom learning activity">
+        <div class="photo-body">
+          <h3>Classroom Experience</h3>
+          <p>Students engaged in a classroom learning activity.</p>
+        </div>
+      </article>
+
+      <article class="photo-card">
+        <img src="assets/student-event.jpg" alt="Student event and achievement activity">
+        <div class="photo-body">
+          <h3>Student Activity</h3>
+          <p>A student-centered school event and achievement activity.</p>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Education</div>
+      <h2>Academic Background</h2>
+    </div>
+
+    <div class="card edu">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="year">2024</div>
+        <h3>University of Dhaka</h3>
+        <p><strong>Bachelor of Education (B.Ed.)</strong></p>
+        <p>Major in Special Education</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="volunteer">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Volunteer Work</div>
+      <h2>Community Engagement</h2>
+    </div>
+    <div class="card">
+      <h3>SWID Bangladesh</h3>
+      <p><strong>Society for the Welfare of Intellectually Disabled</strong></p>
+      <p style="margin-top:10px;color:var(--muted)">
+        Volunteered in awareness and skill-development sessions for children with
+        intellectual disabilities, supporting their academic engagement and daily life skills.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-kicker">Core Skills</div>
+      <h2>Professional Skills</h2>
+    </div>
+    <div class="skills">
+      <div class="skill">Lesson Planning</div>
+      <div class="skill">Administrative Tasks</div>
+      <div class="skill">Conflict Resolution</div>
+      <div class="skill">Student Engagement</div>
+      <div class="skill">Subject Matter Expertise</div>
+      <div class="skill">IEP Development</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="cta">
+      <h2>Let's connect</h2>
+      <p>
+        For professional communication, please use the contact information provided
+        in the CV.
+      </p>
+      <a class="btn btn-secondary" href="mailto:siam***@gmail.com">Send an Email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <div>© 2026 Md. Zakaria Hossen Siam</div>
+    <div>Special Educator • Inclusive Education</div>
+  </div>
+</footer>
+
+</body>
+</html>
